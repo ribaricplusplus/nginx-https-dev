@@ -1,6 +1,13 @@
 # Usage
 
-Start the server:
+Create nginx configuration files
+
+~~~
+cd conf
+make prod
+~~~
+
+Start the server
 
 ~~~
 docker-compose up -d

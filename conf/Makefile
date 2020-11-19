@@ -46,11 +46,6 @@ prod : $(OUTFILES)
 dev : $(OUTFILES)
 	$(copy-symlinks)
 
-.PHONY: install
-install : prod
-	@rsync -a --delete dist/ /etc/nginx
-	@echo "Installed."
-
 .PHONY: check
 check : prod
 	@nginx -t -c $(DIR)/dist/nginx.conf
